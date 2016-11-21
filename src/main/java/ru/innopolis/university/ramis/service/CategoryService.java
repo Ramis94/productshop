@@ -12,4 +12,6 @@ public interface CategoryService {
     Iterable<Category> findAll();
 
     List<Category> findCategoryByCategoryIdParent(Long id);
+
+    void saveCategory(Category category);
 }

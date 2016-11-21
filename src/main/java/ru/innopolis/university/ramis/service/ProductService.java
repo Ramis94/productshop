@@ -10,4 +10,6 @@ import java.util.List;
 public interface ProductService {
 
     List<Product> findProductByCategoryId(Long id);
+
+    void saveProduct(Product product);
 }

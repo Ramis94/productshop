@@ -25,4 +25,9 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> findCategoryByCategoryIdParent(Long id) {
         return null;//categoryRepository.findCategoryByCategoryIdParent(id);
     }
+
+    @Override
+    public void saveCategory(Category category) {
+        categoryRepository.save(category);
+    }
 }
