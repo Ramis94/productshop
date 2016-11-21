@@ -10,6 +10,7 @@
 <html>
   <head>
     <title>$Title$</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   </head>
   <body>
 
@@ -19,5 +20,13 @@
   <c:if test="${userAuth == 'false'}">
     <a href="/login">Войти</a>
   </c:if>
+
+  <br>
+
+  <c:forEach var="category" items="${categories}">
+    <c:if test="${empty category.category}">
+      <a href="/cat=${category.id}">${category.name}</a><br>
+    </c:if>
+  </c:forEach>
   </body>
 </html>
